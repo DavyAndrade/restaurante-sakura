@@ -1,0 +1,4 @@
+# Sakura Management System
+# Dependencias: nenhuma alem da biblioteca padrao Python 3.7+
+# Tkinter e SQLite3 sao modulos built-in do Python,
+# mas o Tk requer o pacote sistema: sudo apt install python3-tk
