@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 from controllers.categoria_controller import CategoriaController
+from views.window_utils import ativar_modal
 
 class CategoriaView:
     def __init__(self, parent):
@@ -10,8 +11,7 @@ class CategoriaView:
         self.janela.title('Gerenciar Categorias')
         self.janela.geometry('550x400')
         self.janela.configure(background='#34495e')
-        self.janela.transient(parent)
-        self.janela.grab_set()
+        ativar_modal(self.janela, parent)
         self._construir()
         self._atualizar_lista()
 

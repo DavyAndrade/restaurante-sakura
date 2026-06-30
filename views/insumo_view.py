@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 from controllers.insumo_controller import InsumoController
+from views.window_utils import ativar_modal
 
 class InsumoView:
     def __init__(self, parent):
@@ -10,8 +11,7 @@ class InsumoView:
         self.janela.title('Gerenciar Insumos')
         self.janela.geometry('700x500')
         self.janela.configure(background='#34495e')
-        self.janela.transient(parent)
-        self.janela.grab_set()
+        ativar_modal(self.janela, parent)
         self._construir()
         self._atualizar_lista()
 

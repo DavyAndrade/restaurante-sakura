@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 from controllers.mesa_controller import MesaController
+from views.window_utils import ativar_modal
 
 class MesaView:
     def __init__(self, parent):
@@ -10,8 +11,7 @@ class MesaView:
         self.janela.title('Gerenciar Mesas')
         self.janela.geometry('650x480')
         self.janela.configure(background='#34495e')
-        self.janela.transient(parent)
-        self.janela.grab_set()
+        ativar_modal(self.janela, parent)
         self._construir()
         self._atualizar_lista()
 

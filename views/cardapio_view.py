@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 from controllers.item_cardapio_controller import ItemCardapioController
 from controllers.categoria_controller import CategoriaController
+from views.window_utils import ativar_modal
 
 class CardapioView:
     def __init__(self, parent):
@@ -12,8 +13,7 @@ class CardapioView:
         self.janela.title('Gerenciar Cardápio')
         self.janela.geometry('800x550')
         self.janela.configure(background='#34495e')
-        self.janela.transient(parent)
-        self.janela.grab_set()
+        ativar_modal(self.janela, parent)
         self._construir()
         self._atualizar_lista()
 
